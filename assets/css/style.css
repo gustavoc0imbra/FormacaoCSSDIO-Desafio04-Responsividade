@@ -2,6 +2,8 @@
 
 header {
     background-image: url("../images/HeaderBackground-Mobile.png");
+    background-size: cover;
+    background-position: center;
 
     display: flex;
     flex-direction: column;
@@ -27,10 +29,19 @@ header h2 {
     width: 50%;
     color: #FFF;
     text-transform: uppercase;
+    text-align: left;
 }
 
 header p {
     color: #FFF;
+    line-height: 21px;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
 }
 
 header button {
@@ -51,54 +62,57 @@ header button {
     color: #FFF;
 }
 
-main section {
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
     padding: 40px 24px;
+    text-align: left;
 }
 
-h3 {
+#meeting-content, #connection-content {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    padding: 40px 24px;
+    text-align: left;
+}
+
+.main-section picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#meeting-content picture, #connection-content picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+}
+
+.section-info h3 {
     font-family: "Open sans", serif;
     font-weight: 800;
     font-size: 1.5rem;
+    line-height: 2rem;
     color: #23272A;
 }
 
-#space-content {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-
-    padding: 40px 24px;
-}
-
-#meeting-content {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-
-    padding: 40px 24px;
-}
-
-#permissions-content {
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-
-    padding: 40px 24px;
-}
-
-#connection-content {
+.gray-background {
     background-color: #F6F6F6;
-
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-
-    padding: 40px 24px;
 }
 
 #connection-content h2 {
     font-weight: 400;
-}
+} 
 
 footer {
     background-color: #23272A;
@@ -106,4 +120,91 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 140px;
+}
+
+footer img {
+    height: 45px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        background-image: url("../images/HeaderBackground.png");
+
+        text-align: center;
+        align-items: center;
+    }
+
+    header h2 {
+        text-align: center;
+    }
+
+    .header-buttons {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 637px) {
+    header h2 {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        background-position: center;
+        background-size: initial;
+    }
+
+
+    header h2 {
+        width: 25%;
+    }
+
+    .header-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    .main-section {
+        max-width: 970px;
+        margin: auto;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .section-info {
+        justify-content: center;
+    }
+
+    .section-info h3 {
+        font-size: 2.5rem;
+        line-height: 54px;
+    }
+
+    #meeting-content, #connection-content {
+        gap: 16px;
+    }
+
+    #meeting-content {
+        flex-direction: row-reverse;
+    }
+
+    #connection-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding: 40px;
+        text-align: center;
+    }
+
+    #connection-content h2 {
+        width: 60%;
+    }
+
 }
