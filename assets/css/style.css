@@ -83,7 +83,7 @@ p {
     text-align: left;
 }
 
-#meeting-content {
+#meeting-content, #connection-content {
     background-color: #F6F6F6;
 }
 
@@ -114,10 +114,6 @@ p {
     font-size: 1.5rem;
     line-height: 2rem;
     color: #23272A;
-}
-
-.gray-background {
-    background-color: #F6F6F6;
 }
 
 #connection-content .section-wrapper h2 {
